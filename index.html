@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+        <div class="video-container">
+            <div>
+                <video name="videoElement" id="video" class="centeredVideo" controls src="ct.mp4">
+                    Your browser is too old which doesn't support HTML5 video.
+                </video>
+
+            </div>
+            
+        </div>
+        <div>
+            <canvas class="centeredCanvas" id="cshow"></canvas>
+        </div>
+        <div class="controls">
+            <button onclick="flv_load()">Load</button>
+            <button onclick="flv_stop()">Stop</button>
+        </div>
+
+    </div>
+
+    <script src="filter.js"></script>
+
+    <script>
+
+
+
+        processor.doLoad("video", "cshow");
+        function flv_load() {
+            document.getElementById("video").play();
+        }
+
+        function flv_stop() {
+
+            document.getElementById("video").pause();
+        }
+    </script>
+
+</body>
+
+</html>
